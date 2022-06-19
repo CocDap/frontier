@@ -3,7 +3,7 @@ use frontier_template_runtime::{
 	Signature, SudoConfig, SystemConfig, WASM_BINARY,
 };
 
-use sc_service::ChainType;
+use sc_service::{ChainType, Properties};
 use sp_consensus_aura::sr25519::AuthorityId as AuraId;
 use sp_core::{sr25519, Pair, Public, H160, U256, crypto::UncheckedInto};
 use sp_finality_grandpa::AuthorityId as GrandpaId;
@@ -74,7 +74,7 @@ pub fn development_config() -> Result<ChainSpec, String> {
 		Some(DEFAULT_PROTOCOL_ID),
 		None,
 		// Properties
-		None,
+		Some(properties()),
 		// Extensions
 		None,
 	))
@@ -125,7 +125,7 @@ pub fn local_testnet_config() -> Result<ChainSpec, String> {
 		Some(DEFAULT_PROTOCOL_ID),
 		None,
 		// Properties
-		None,
+		Some(properties()),
 		// Extensions
 		None,
 	))
@@ -245,7 +245,7 @@ pub fn staging_testnet_config() -> Result<ChainSpec, String> {
 		Some(DEFAULT_PROTOCOL_ID),
 		None,
 		// Properties
-		None,
+		Some(properties()),
 		// Extensions
 		None,
 	))
@@ -325,4 +325,15 @@ fn staging_testnet_genesis(
 		dynamic_fee: Default::default(),
 		base_fee: Default::default(),
 	}
+}
+
+
+pub fn properties() -> Properties {
+	let mut properties = Properties::new();
+
+	properties.insert("ss58Format".into(), 28.into());
+	properties.insert("tokenDecimals".into(), 18.into());
+	properties.insert("tokenSymbol".into(), "DINAR".into());
+
+	properties
 }
