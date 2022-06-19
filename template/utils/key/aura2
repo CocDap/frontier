@@ -1,0 +1,10 @@
+{
+    "jsonrpc":"2.0",
+    "id":1,
+    "method":"author_insertKey",
+    "params": [
+        "aura",
+        "faculty license blossom sponsor tackle capable sword submit festival senior punch never",
+        "0xea8f6d65fce81330127536293c4da64359ebb557f18dfabbefc167cf11d6b238"
+    ]
+}

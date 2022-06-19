@@ -1,0 +1,10 @@
+{
+    "jsonrpc":"2.0",
+    "id":1,
+    "method":"author_insertKey",
+    "params": [
+        "gran",
+        "level clap empty seat easy meadow merit mechanic obvious hold adapt comfort",
+        "0xea236e7e3a521dc527dc0018d9aca30f57294cdcaca78b3eb7db7c6689238bb1"
+    ]
+}

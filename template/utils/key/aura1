@@ -1,0 +1,10 @@
+{
+    "jsonrpc":"2.0",
+    "id":1,
+    "method":"author_insertKey",
+    "params": [
+        "aura",
+        "level clap empty seat easy meadow merit mechanic obvious hold adapt comfort",
+        "0x6c633510dd06246e8433447c97829007d3620938003add7b54f6902b4b546317"
+    ]
+}

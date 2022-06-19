@@ -1,0 +1,10 @@
+{
+    "jsonrpc":"2.0",
+    "id":1,
+    "method":"author_insertKey",
+    "params": [
+        "gran",
+        "faculty license blossom sponsor tackle capable sword submit festival senior punch never",
+        "0xa3bca2fb969491b12cd9ace69a0b7a6c1c7c54bceb1de491eaa7c8b552c76ee4"
+    ]
+}
