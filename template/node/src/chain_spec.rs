@@ -16,6 +16,8 @@ use hex_literal::hex;
 /// Specialized `ChainSpec`. This is a specialization of the general Substrate ChainSpec type.
 pub type ChainSpec = sc_service::GenericChainSpec<GenesisConfig>;
 
+const DEFAULT_PROTOCOL_ID: &str = "frontier";
+
 /// Generate a crypto pair from seed.
 pub fn get_from_seed<TPublic: Public>(seed: &str) -> <TPublic::Pair as Pair>::Public {
 	TPublic::Pair::from_string(&format!("//{}", seed), None)
@@ -69,7 +71,7 @@ pub fn development_config() -> Result<ChainSpec, String> {
 		// Telemetry
 		None,
 		// Protocol ID
-		None,
+		Some(DEFAULT_PROTOCOL_ID),
 		None,
 		// Properties
 		None,
@@ -120,7 +122,7 @@ pub fn local_testnet_config() -> Result<ChainSpec, String> {
 		// Telemetry
 		None,
 		// Protocol ID
-		None,
+		Some(DEFAULT_PROTOCOL_ID),
 		None,
 		// Properties
 		None,
@@ -240,7 +242,7 @@ pub fn staging_testnet_config() -> Result<ChainSpec, String> {
 		// Telemetry
 		None,
 		// Protocol ID
-		None,
+		Some(DEFAULT_PROTOCOL_ID),
 		None,
 		// Properties
 		None,
